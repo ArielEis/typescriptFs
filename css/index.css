@@ -1,0 +1,400 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: gray;
+}
+
+
+/* Top bar */
+
+#top_bar{
+    height: 10%;
+    width: 100%;
+    border: 2px solid black;
+}
+
+
+#top_bar .enabled_button{
+    background-color: #666666;
+    font-size: 35px;
+    border-color: white;
+    outline: 2px solid black;
+}
+
+#top_bar .disabled_button{
+    background-color: #666666;
+    font-size: 35px;
+    border-color: #666666;
+    outline: 2px solid #666666;
+}
+
+#go_back{
+    position: relative;
+    top: 9px;
+    left: 20px;
+}
+
+#go_forward{
+    position: relative;
+    top: 9px;
+    left: 30px;
+}
+
+
+#address_line{
+    position: relative;
+    width: 700px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    top: 3px;
+    left: 305px;
+    background-color: snow;
+    border: 5px solid #666666;
+    outline: 3px groove black;
+}
+
+
+/* Behind top bar */
+
+#page {
+    display: table;
+    width:100%;
+    height: 86%;
+}
+
+/* browser: */
+
+#browser{
+    display: table-cell;
+    background-color: snow;
+    border: 2px solid black;
+    height: 100%;
+    width: 22%;
+    vertical-align: top;
+}
+
+
+#browser .folder{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+#browser li{
+    position: relative;
+    left: -10%;
+    list-style-type: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#browser li a:active, #browser li a:hover, #browser li a {
+    color: black;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+
+/* content: */
+
+#content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: snow;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+#content .template{
+    width: 5.5%;
+    height: 11%;
+    text-align: center;
+    margin: 10px;
+}
+
+#content .icon{
+    width: 70%;
+    height: 15%;
+}
+
+#content .icon:hover{
+    cursor: pointer;
+}
+
+
+#content .file_name{
+    position: relative;
+    font-size: 80%;
+    word-break: break-all;
+}
+
+
+
+/* File content presentation */
+
+#open_file_window{
+    position: absolute;
+    display: none;
+    top: 90px;
+    left: 350px;
+    outline: 2px solid black;
+}
+
+#open_file_window .file_top{
+    width: 762px;
+    background-color: royalblue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#open_file_window .file_title{
+    margin-left: 1%;
+}
+
+#open_file_window .file_content{
+    width: 762px;
+    height: 400px;
+    background-color: #666;
+    border-top: 2px solid black;
+}
+
+#open_file_window .file_bottom{
+    width: 762px;
+    height: 40px;
+    background-color: #666;
+}
+
+#open_file_window .file_bottom .file_button{
+    background-color: black;
+    outline: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#save_file{
+    margin-left: 14px;
+    margin-top: 6px;
+    margin-right: 585px;
+}
+
+#file_content_text{
+    background-color: darkgrey;
+    font-size: 25px;
+    margin-left: 12px;
+    margin-top: 9px;
+    resize: none;
+}
+
+#file_quit{
+    position: absolute;
+    top: 1px;
+    left: 736px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+
+/*Context menu*/
+
+#content_menu {
+    background-color: #FFFFFF;
+    border: 4px solid #6A6A6A;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #474747;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    display: none;
+    cursor: url('../pics/blacke_mouse_icon.png'), auto;
+
+}
+
+#menu_title{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+#new_file_menu {
+    background-color: #FFFFFF;
+    border: 4px solid #6A6A6A;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #474747;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    display: none;
+    cursor: url('../pics/blacke_mouse_icon.png'), auto;
+
+}
+
+.menuItem {
+    display: block;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family:Arial, Helvetica, Sans-Serif;
+    font-size: 18px;
+}
+
+.menuItem:hover {
+    background-color: royalblue;
+    color: white;
+}
+
+.menu_break {
+    width: 100%;
+    height: 1px;
+    background-color: darkgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#delete_file:hover .icon_menu {
+    content: url("../icons/blue_delete_icon.png");
+}
+
+#rename_file:hover .icon_menu {
+    content: url("../icons/blue_edit_icon.png");
+}
+
+#new_file:hover .icon_menu {
+    content: url("../icons/blue_new_icon.png");
+}
+
+.quit_menu:hover .icon_menu {
+    content: url("../icons/blue_quit_icon.png");
+}
+
+
+/* Prompts */
+
+
+#template_prompt{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    display: none;
+    width: 300px;
+    height: 113px;
+    border: 5px groove black;
+    border-radius: 9px;
+}
+
+.prompt_top_down{
+    background-color: gray;
+    line-height: 30px;
+}
+
+.prompt_content{
+    background-color: #333333;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.prompt_title{
+    position: relative;
+    top: 2px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.prompt_quit{
+    position: absolute;
+    top: 4px;
+    left: 270px;
+    border: 2px solid white;
+    background-color: #333333;
+    color: white;
+    font-size: 16px;
+}
+
+.prompt_text{
+    margin-left: 10px;
+    width: 275px;
+    height: 20px;
+}
+
+.prompt_confirm{
+    position: relative;
+    top: 2px;
+    left: 8px;
+    outline: 1px solid black;
+    height: 27px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.prompt_cancel{
+    position: absolute;
+    top: 85px;
+    left: 212px;
+    outline: 1px solid black;
+    height: 27px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Alerts: */
+#template_alert{
+    position: absolute;
+    display: none;
+    top: 200px;
+    left: 500px;
+    width: 300px;
+    height: 160px;
+    border: 5px groove black;
+    border-radius: 9px;
+    z-index: 9999;
+}
+
+.alert_top{
+    background-color: black;
+    color: snow;
+    font-size: 25px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.alert_content{
+    background-color: indianred;
+    height: 130px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.alert_confirm{
+    position: absolute;
+    top: 120px;
+    left: 123px;
+    background-color: indianred;
+    outline: 3px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.alert_text{
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+

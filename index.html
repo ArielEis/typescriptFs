@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web file browser</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+
+<div id="top_bar">
+    <input type="button" class="disabled_button" id="go_back" value="<">
+    <input type="button" class="disabled_button" id="go_forward" value=">">
+    <input type="text" id="address_line" value="$$Address">
+</div>
+
+
+<div id="page">
+    <div id="browser">
+       <ul class="template">
+           <li><ul id="ul_0">
+               <img class="folder" src="pics/close_directory.png">
+               <img class="arrow" src="pics/arrow.png">
+               <a href="#">$$Directory</a></ul></li>
+       </ul>
+    </div>
+    <div id="content">
+        <span class="template">
+            <img class="icon" src="pics/close_directory.png"><div class="file_name">$$name</div>
+        </span>
+    </div>
+</div>
+
+
+
+
+<div id="content_menu">
+        <div id="menu_title"></div>
+    <div class="menu_break"></div>
+    <span class="menuItem" id="new_file"><img class="icon_menu" src="icons/white_new_icon.png">
+        New</span>
+    <div class="menu_break"></div>
+    <span class="menuItem" id="delete_file"><img class="icon_menu" src="icons/white_delete_icon.png">
+        Delete</span>
+    <span class="menuItem" id="rename_file"><img class="icon_menu" src="icons/white_edit_icon.png">
+        rename</span>
+    <div class="menu_break"></div>
+    <span class="menuItem quit_menu" ><img class="icon_menu" src="icons/white_quit_icon.png">
+         Quit</span>
+
+    <div id="new_file_menu">
+        <span class="menuItem" id="new_directory">Directory</span>
+        <div class="menu_break"></div>
+        <span class="menuItem" id="new_txt_file">Text file</span>
+    </div>
+</div>
+
+
+<div id="template_prompt">
+    <div class="prompt_top_down">
+        <span class="prompt_title">$$Title</span>
+        <input type="button" class="prompt_quit" value="X">
+    </div>
+    <div class="prompt_content">
+        <input type="text" class="prompt_text">
+    </div>
+    <div class="prompt_top_down">
+        <input type="button" class="prompt_confirm" value="OK">
+        <input type="button" class="prompt_cancel" value="Cancel">
+    </div>
+</div>
+
+
+
+<div id="template_alert">
+    <div class="alert_top">
+        <span class="alert_title">Error</span>
+    </div>
+    <div class="alert_content">
+        <div class="alert_text">$$Alert_Content</div>
+        <input type="button" class="alert_confirm" value="OK">
+    </div>
+</div>
+
+
+
+<div id="open_file_window">
+    <div class="file_top">
+        <span class="file_title">$$File_name</span>
+        <input type="button" id="file_quit" value="X">
+    </div>
+    <div class="file_content">
+        <textarea id="file_content_text" rows="13" cols="51">$$File_content</textarea>
+    </div>
+    <div class="file_bottom">
+        <input type="button" class="file_button" id="save_file" value="Save">
+        <input type="button" class="file_button" id="cancel_file" value="Cancel">
+    </div>
+</div>
+
+
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="sysJs.js"></script>
+</body>
+</html>
